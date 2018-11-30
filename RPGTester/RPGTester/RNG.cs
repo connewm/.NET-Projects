@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Newman.RPGCore
 {
+    // modified from provided RNG implementation (created seperate class for RNG)
     // a singleton that allows the whole game to use the same seed for the RNG
     class RNG
     {

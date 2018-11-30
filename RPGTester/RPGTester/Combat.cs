@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newman.RolePlayingGameInterfaces;
 
 
-namespace OhioState.RoleplayingGameLibrary
+namespace Newman.RPGCore
 {
     public class Combat : ICombat
     {
