@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPFBattle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFBattle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="simRow" Height="260"/>
+            <RowDefinition x:Name="consoleRow" Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="background" HorizontalAlignment="stretch" Height="auto" VerticalAlignment="stretch" Width="auto" Source="assets/back4.jpg" Stretch="UniformToFill" Margin="0,-219,0,0"/>
+
+        <TextBox x:Name="test" Grid.Row="1" HorizontalAlignment="stretch" Height="auto" Padding="0,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="stretch" Width="auto" Foreground="White" FontFamily="Courier New" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,-2">
+            <TextBox.Background>
+                <ImageBrush ImageSource="assets/text-back.png"/>
+            </TextBox.Background>
+        </TextBox>
+        <local:CharacterImage Tag="p1" x:Name="p1img" HorizontalAlignment="Left" Height="100" Margin="672,94,0,0" VerticalAlignment="Top" Width="100" AttackingImageSource="assets/Flare_attack.png" DeadImageSource="assets/Flare_dead.png" IdleImageSource="assets/Flare_idle.png" IsManipulationEnabled="True" TakeDamageImageSource="assets/Flare_hurt.png"/>
+        <local:CharacterImage Tag="e1" x:Name="e1img" HorizontalAlignment="Left" Height="100" Margin="283,155,0,0" VerticalAlignment="Top" Width="100" AttackingImageSource="assets/Riku_attack.png" DeadImageSource="assets/Riku_dead.png" IdleImageSource="assets/Riku_idle.png" TakeDamageImageSource="assets/Riku_hurt.png"/>
+        <local:CharacterImage Tag="e2" x:Name="e2img" HorizontalAlignment="Left" Height="100" Margin="178,94,0,0" VerticalAlignment="Top" Width="100" AttackingImageSource="assets/Vexen_attack.png" DeadImageSource="assets/Vexen_dead.png" IdleImageSource="assets/Vexen_idle.png" TakeDamageImageSource="assets/Vexen_hurt.png" RenderTransformOrigin="0.5,0.5">
+            <local:CharacterImage.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:CharacterImage.RenderTransform>
+        </local:CharacterImage>
+        <local:CharacterImage Tag="p2" x:Name="p2img" HorizontalAlignment="Left" Height="100" Margin="572,155,0,0" VerticalAlignment="Top" Width="100" AttackingImageSource="assets/Xenmas_attack.png" DeadImageSource="assets/Xenmas_dead.png" IdleImageSource="assets/Xenmas_idle.png" TakeDamageImageSource="assets/Xenmas_hurt.png"/>
+        
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfReportInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReportInfo>
+    <Title>Enter Report Title...</Title>
+    <Subject>Enter Report Subject...</Subject>
+    <Link>Enter a web link for the report if available...</Link>
+    <WebLinkDefaultText>http://example.com</WebLinkDefaultText>
+    <FileSource />
+    <FileText>Browse for a PDF File</FileText>
+    <DatePublished>2010-01-01T00:00:00</DatePublished>
+  </ReportInfo>
+  <ReportInfo>
+    <Title>SampleReport1</Title>
+    <Subject>Showcasing functioanlity</Subject>
+    <Link>https://github.com</Link>
+    <WebLinkDefaultText>http://example.com</WebLinkDefaultText>
+    <FileSource>D:\source\repos\ProgrammingAssignment4\ProgrammingAssignment4\test-PDF\pdf-test.pdf</FileSource>
+    <FileText>pdf-test.pdf</FileText>
+    <DatePublished>2010-01-01T00:00:00</DatePublished>
+    <Summary>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs17 A program for organizing reports/papers. Hatched for the purpose of organizing research materials, it has the following functions:\par
+Title: report title\par
+Subject: report subject\par
+Link: hyperlink which opens web browser or thrws exception (more SampleReport2)\par
+File: a PDF file attachment using an absolute filepath (more SampleReport3)\par
+Date Published: the date the report was published \par
+Summary: Rich text field for summary\par
+Delete: delete currently selected report with Warning prompt (more SampleReport2)\par
+Save: save currently selecred report to ReportList (list box)\par
+\par
+\par
+}
+</Summary>
+  </ReportInfo>
+  <ReportInfo>
+    <Title>SampleReport2</Title>
+    <Subject>Exceptions for Link and File, as well as Saving, Opening, and Exiting</Subject>
+    <Link>invalid link test</Link>
+    <WebLinkDefaultText>http://example.com</WebLinkDefaultText>
+    <FileSource />
+    <FileText>Browse for a PDF File</FileText>
+    <DatePublished>2010-01-01T00:00:00</DatePublished>
+    <Summary>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs17 Link: Exception handling for invalid web links. Click the above to see error message\par
+File: Exception handling for null filepath. Click the linklabel next to File to test\par
+Click Browse to add a PDF file\par
+\par
+Delete: prompts user before deleting the currently selected report. Includes report Title in the Warning so user knows which is selected\par
+\par
+File --&gt; Save Works... saves the Report List as a (.rlist) extension\par
+File --&gt; Open... opens a previously saved (.rlist), issues addressed using absolute filepath for multiple machines addressed in SampleReport3\par
+File --&gt; Exit prompts the user ofr unsaved changes to current report, unsaved changes to lst, or both. Change this report and try exiting for Warning for both\par
+Change this report, click Save and try exiting for Warning about unsaved changes to list\par
+}
+</Summary>
+  </ReportInfo>
+  <ReportInfo>
+    <Title>SampleReport3</Title>
+    <Subject>Information on Open and issues with attached PDF files</Subject>
+    <Link>For example</Link>
+    <WebLinkDefaultText>http://example.com</WebLinkDefaultText>
+    <FileSource>D:\source\repos\ProgrammingAssignment4\ProgrammingAssignment4\test-PDF\pdf-test.pdf</FileSource>
+    <FileText>pdf-test.pdf</FileText>
+    <DatePublished>2010-01-01T00:00:00</DatePublished>
+    <Summary>{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs17 You will see that the link for the above 'pdf-test.pdf' works on your machine even though the program uses absolute filepaths and I attached it using my filesystem.\par
+This is because the program also does a check for a valid relative filepath after checking for the absolute filepath.\par
+To work, the PDF file must be located WITHIN the project directory, and the same relative directories as when it was added.\par
+This means if I want to add 'pdf-test.pdf' from D:\\example\\PDF-file and access it on a different machine, I must first copy it to D:\\filler\\text\\ProgrammingAssignment4\\ProgrammingAssignment4\\...\par
+The program uses the absolute filepath, but chops off everything before the project directory and concatenates it with the parent directory of the programs running directory\par
+(i.e. ...ProgrammingAssignment4)\par
+I.e.:\par
+The PDF file relative directory = "...\\somedirectory\\pdf-test.pdf"\par
+The Environment.CurrentDirectory (minus \\bin\\...) = "\\absolute\\path\\to\\ProgrammingAssignment4\\ProgrammingAssignment4..."\par
+The used directory = ""\\absolute\\path\\to\\ProgrammingAssignment4\\ProgrammingAssignment4\\somedirectory\\pdf-test.pdf"\par
+\par
+(.rlist) files with attached PDFs can be opened on other machines, but the attached PDFs must be within the project directory under the same relative filepath\par
+More in the block comment within linklabel2_linkClicked in ReportLIst.cs (the event handler that uses the filepaths)\par
+}
+</Summary>
+  </ReportInfo>
+</ArrayOfReportInfo>
