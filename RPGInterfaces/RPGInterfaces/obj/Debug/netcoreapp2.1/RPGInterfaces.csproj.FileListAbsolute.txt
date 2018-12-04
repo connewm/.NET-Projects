@@ -1,9 +1,0 @@
-D:\source\repos\RPGInterfaces\RPGInterfaces\bin\Debug\netcoreapp2.1\RPGInterfaces.deps.json
-D:\source\repos\RPGInterfaces\RPGInterfaces\bin\Debug\netcoreapp2.1\RPGInterfaces.dll
-D:\source\repos\RPGInterfaces\RPGInterfaces\bin\Debug\netcoreapp2.1\RPGInterfaces.pdb
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.csprojAssemblyReference.cache
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.csproj.CoreCompileInputs.cache
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.AssemblyInfoInputs.cache
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.AssemblyInfo.cs
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.dll
-D:\source\repos\RPGInterfaces\RPGInterfaces\obj\Debug\netcoreapp2.1\RPGInterfaces.pdb
