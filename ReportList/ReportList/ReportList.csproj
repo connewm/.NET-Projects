@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8DF40F51-B4AF-42FC-AC4C-147DF6355718}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProgrammingAssignment4</RootNamespace>
-    <AssemblyName>ProgrammingAssignment4</AssemblyName>
+    <RootNamespace>ReportList</RootNamespace>
+    <AssemblyName>ReportList</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -63,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
