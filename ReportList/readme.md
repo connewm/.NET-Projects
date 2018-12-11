@@ -6,7 +6,9 @@ In the future I will be adding functionality for automatic MLA, ALA, etc. citati
 This will also require adding more fields (such as Author, Date Accessed, etc.)
 
 The Report List tool allows users to generate and save Report List (.rlist) files containing multiple Reports, each with data pertaining to
-any article or piece of literature. These fields are as follows:
+any article or piece of literature. It save in simple XML format but will be updated later to account for future changes.
+
+These fields are as follows:
 
 ### Title
 The title of the work in plaintext
